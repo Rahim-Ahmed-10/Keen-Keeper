@@ -8,6 +8,7 @@ import NotFoundPage from './pages/NotFoundPage/NotFoundPage'
 import Timeline from './pages/Timeline/Timeline'
 import StatsPage from './pages/StatsPage/StatsPage'
 import HomePage from './pages/HomePage/HomePage'
+import FriendDetails from './pages/FriendsDetails/FriendDetails'
 
 const router = createBrowserRouter(
   [
@@ -19,6 +20,11 @@ const router = createBrowserRouter(
           index: true,
           element: <HomePage />,
           // loader: ()=> fetch("/data.json"),
+        },
+        {
+          path: '/FriendsDetails/:friendId',
+          element: <FriendDetails />,
+          loader: () => fetch('/data.json'),
         },
         {
           path: '/Timeline',

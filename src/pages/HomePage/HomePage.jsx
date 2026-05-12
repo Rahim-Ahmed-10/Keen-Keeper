@@ -12,7 +12,7 @@ const [loading, setLoading] = useState(true);
         const data = await res.json();
         
         setTimeout (() =>{
-            setFriends(data);
+        setFriends(data);
         setLoading(false);
         },1000);
 

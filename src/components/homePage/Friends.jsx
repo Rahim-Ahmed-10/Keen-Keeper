@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 import { FadeLoader } from 'react-spinners';
 // import { useLoaderData } from 'react-router';
 
@@ -33,7 +34,7 @@ const statusColors= {
          (<div className='grid grid-cols-4 gap-4 mb-17'>
             {
             friends.map((friend) =>{
-                return <div key={friend.id} className="card bg-base-100  shadow-sm">
+                return <Link to={`/FriendsDetails/${friend.id}`} key={friend.id} className="card bg-base-100  shadow-sm">
   <figure className="px-10 pt-10">
     <img
       src={friend.picture}
@@ -57,7 +58,7 @@ const statusColors= {
         </div>
     </div>
   </div>
-</div>
+</Link>
             })       
             }
         </div>
