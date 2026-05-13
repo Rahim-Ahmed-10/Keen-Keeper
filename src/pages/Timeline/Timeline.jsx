@@ -9,8 +9,8 @@ const Timeline = () => {
     console.log(callTimeLine, "contextData");
     const [filterType, setFilterType] = useState('Filter timeline');
 
-    const filteredTimeline = callTimeLine.filter(item => {
-      if(filterType === 'Filter timeline')return true;
+    const filteredTimeline = (callTimeLine || []).filter(item =>{
+        if(filterType === 'Filter timeline')return true;
       return item.type === filterType;
     })
     return (
