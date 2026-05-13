@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { TimeLineContext } from '../../context/TimeLineContext';
 import { MessageSquare, Phone, Video } from 'lucide-react';
 
@@ -6,12 +6,29 @@ import { MessageSquare, Phone, Video } from 'lucide-react';
 const Timeline = () => {
 
     const {callTimeLine, setCallTimeLine} = useContext(TimeLineContext);
-    console.log(callTimeLine, "contextData")
+    console.log(callTimeLine, "contextData");
+    const [filterType, setFilterType] = useState('Filter timeline');
+
+    const filteredTimeline = callTimeLine.filter(item => {
+      if(filterType === 'Filter timeline')return true;
+      return item.type === filterType;
+    })
     return (
         <div className='container mx-auto mt-20 mb-10'>
             <h2 className='font-bold text-2xl'>Timeline </h2>
+            <div>
+              <select 
+  className="select w-full max-w-xs my-4 rounded-full" value={filterType} 
+  onChange={(e) => setFilterType(e.target.value)}
+>
+  <option value="Filter timeline">Filter timeline</option>
+  <option value="text">Text</option>
+  <option value="call">Call</option>
+  <option value="video">Video</option>
+</select>
+            </div>
         {
-            callTimeLine.map((item) => {
+            filteredTimeline.map((item) => {
                 return <div key={item.id} className="flex items-center border-b p-2 ">
     {item.type === 'call' && <Phone className="text-gray-600" />}
     {item.type === 'text' && <MessageSquare className="text-gray-600" />}

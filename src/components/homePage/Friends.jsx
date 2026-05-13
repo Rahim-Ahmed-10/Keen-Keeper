@@ -43,7 +43,7 @@ const statusColors= {
   </figure>
   <div className="card-body items-center text-center">
     <h2 className="card-title">{friend.name}</h2>
-    <p>{friend.days_since_content}32d age</p>
+    <p>{friend.days_since_contact}day age</p>
     <div className="flex flex-wrap gap-2 mt-4 justify-center">
         {friend.tags.map((tag, index)=>(
             <span key={index} className='px-3 py-1 text-[10px] font-bold uppercase rounded-full bg-green-100 text-green-700'>

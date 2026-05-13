@@ -124,7 +124,7 @@
     "name": "Ryan Martinez",
     "picture": "https://randomuser.me/api/portraits/men/11.jpg",
     "email": "ryan@code.com",
-    "days_since_contact": 0,
+    "days_since_contact": 11,
     "status": "active",
     "tags": ["work", "developer"],
     "bio": "Backend expert. Great for API discussions.",

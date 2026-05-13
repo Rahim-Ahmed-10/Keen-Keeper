@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { data, useLoaderData, useParams } from 'react-router';
 import { Phone, MessageSquare, Video, Clock, Archive, Trash2, Type } from 'lucide-react';
 import { TimeLineContext } from '../../context/TimeLineContext';
+import { toast } from 'react-toastify';
 
 
 const statusColors= {
@@ -23,13 +24,14 @@ const FriendDetails = () => {
     const {callTimeLine, setCallTimeLine} = useContext(TimeLineContext);
 
     const handleCallTimeLine = (selectedType) => {
+    
         if(selectedType === 'call'){
-            alert(`Calling ${expectedFriend?.name}`);
+            toast.success(`Calling with ${expectedFriend?.name}`);
         }else if(selectedType === 'text'){
-            alert(`Text ${expectedFriend?.name}`);
+            toast.success(`Text with ${expectedFriend?.name}`);
         }
         else if(selectedType === 'video'){
-            alert(`Video calling ${expectedFriend?.name}`);
+            toast.success(`Video calling with ${expectedFriend?.name}`);
         }
 
         const newCallEntry ={
