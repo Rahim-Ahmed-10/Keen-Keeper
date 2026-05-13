@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import { useLoaderData, useParams } from 'react-router';
-import { Phone, MessageSquare, Video, Clock, Archive, Trash2 } from 'lucide-react';
+import React, { useContext, useState } from 'react';
+import { data, useLoaderData, useParams } from 'react-router';
+import { Phone, MessageSquare, Video, Clock, Archive, Trash2, Type } from 'lucide-react';
+import { TimeLineContext } from '../../context/TimeLineContext';
 
 
 const statusColors= {
@@ -18,12 +19,29 @@ const FriendDetails = () => {
 
     const expectedFriend = friends.find(friend => friend.id === Number(friendId));
 
-    const [callTimeLine, setCallTimeLine] = useState([]);
 
-    const handleCallTimeLine = () => {
-        setCallTimeLine([...callTimeLine, expectedFriend])
+    const {callTimeLine, setCallTimeLine} = useContext(TimeLineContext);
+
+    const handleCallTimeLine = (selectedType) => {
+        if(selectedType === 'call'){
+            alert(`Calling ${expectedFriend?.name}`);
+        }else if(selectedType === 'text'){
+            alert(`Text ${expectedFriend?.name}`);
+        }
+        else if(selectedType === 'video'){
+            alert(`Video calling ${expectedFriend?.name}`);
+        }
+
+        const newCallEntry ={
+           id:Date.now(),
+           name:expectedFriend?.name,
+           image:expectedFriend?.picture,
+           type:selectedType,
+            data:new Date() .toLocaleString(),
+        }
+        setCallTimeLine([...callTimeLine, newCallEntry])
     }
-    console.log(callTimeLine, "handleCallTimeLine")
+    
 
     return (
 
@@ -97,15 +115,15 @@ const FriendDetails = () => {
                     <div>
                         <h3 className="text-gray-400 text-xs font-bold uppercase mb-4 ml-2">Quick Check-In</h3>
                         <div className="grid grid-cols-3 gap-4">
-                            <button onClick={handleCallTimeLine} className="flex flex-col items-center gap-3 bg-white p-6 rounded-3xl shadow-sm border border-gray-100 hover:bg-blue-50 transition-all cursor-pointer">
+                            <button onClick={()=> handleCallTimeLine('call')} className="flex flex-col items-center gap-3 bg-white p-6 rounded-3xl shadow-sm border border-gray-100 hover:bg-blue-50 transition-all cursor-pointer">
                                 <Phone className="text-gray-600" />
                                 <span className="text-sm font-bold text-gray-500">Call</span>
                             </button>
-                            <button className="flex flex-col items-center gap-3 bg-white p-6 rounded-3xl shadow-sm border border-gray-100 hover:bg-blue-50 transition-all cursor-pointer">
+                            <button onClick={()=> handleCallTimeLine('text')} className="flex flex-col items-center gap-3 bg-white p-6 rounded-3xl shadow-sm border border-gray-100 hover:bg-blue-50 transition-all cursor-pointer">
                                 <MessageSquare className="text-gray-600" />
                                 <span className="text-sm font-bold text-gray-500">Text</span>
                             </button>
-                            <button className="flex flex-col items-center gap-3 bg-white p-6 rounded-3xl shadow-sm border border-gray-100 hover:bg-blue-50 transition-all cursor-pointer">
+                            <button onClick={()=> handleCallTimeLine('video')} className="flex flex-col items-center gap-3 bg-white p-6 rounded-3xl shadow-sm border border-gray-100 hover:bg-blue-50 transition-all cursor-pointer">
                                 <Video className="text-gray-600" />
                                 <span className="text-sm font-bold text-gray-500">Video</span>
                             </button>
