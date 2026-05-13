@@ -17,26 +17,26 @@ const Rank = ({friends}) => {
     return (
         <div className='grid  gap-4 justify-center m-8 container mx-auto md:grid-cols-2 lg:grid-cols-4'>
             <div className='flex items-center justify-center '>
-                <div className='w-60 h-60 flex flex-col  justify-center items-center  rounded-2xl shadow-2xl'>
+                <div className='w-60 h-60 flex flex-col  justify-center items-center  rounded-2xl shadow-xl'>
                     <span className='font-bold text-2xl'>{totalCount}</span>
                 <p className='font-medium'>Total Friends</p>
                 </div>
             </div>
             <div className='flex items-center justify-center'>
-                <div className='w-60 h-60 flex flex-col  justify-center items-center  rounded-2xl shadow-2xl'>
+                <div className='w-60 h-60 flex flex-col  justify-center items-center  rounded-2xl shadow-xl'>
                     <span className='font-bold text-2xl'>{onTrackCount}</span>
                 <p className='font-medium text-green-500'>On Track</p>
                 </div>
             </div>
             <div className='flex items-center justify-center '>
-                <div className='w-60 h-60 flex flex-col  justify-center items-center  rounded-2xl shadow-2xl'>
+                <div className='w-60 h-60 flex flex-col  justify-center items-center  rounded-2xl shadow-xl'>
                     <span className='font-bold text-2xl'>{needCount}</span>
                 <p className='font-medium text-red-500'>Need Attention</p>
                 </div>
             </div>
             <div className='flex items-center justify-center'>
 
-                <div className='w-60 h-60 flex flex-col  justify-center items-center rounded-2xl shadow-2xl'>
+                <div className='w-60 h-60 flex flex-col  justify-center items-center rounded-2xl shadow-xl'>
                     <span className='font-bold text-2xl'>{interactionCount}</span>
                 <p className='font-medium'>Interactions This Month</p>
                 </div>

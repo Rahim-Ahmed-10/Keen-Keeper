@@ -1,16 +1,59 @@
-# React + Vite
+🚀 KeenKeeper - Personal Interaction Tracker
+KeenKeeper হলো একটি আধুনিক ওয়েব অ্যাপ্লিকেশন যা ব্যবহারকারীদের তাদের প্রতিদিনের বিভিন্ন ইন্টারঅ্যাকশন (Call, Text, Video) ট্র্যাক করতে এবং সেগুলোর উপর ভিত্তি করে সুন্দর স্ট্যাটিস্টিকস দেখতে সাহায্য করে। এটি রিঅ্যাক্ট এবং আধুনিক ইউআই লাইব্রেরি দিয়ে তৈরি করা হয়েছে।
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+✨ মূল বৈশিষ্ট্য (Features)
+টাইমলাইন ম্যানেজমেন্ট: প্রতিদিনের ইন্টারঅ্যাকশনগুলো ডেট অনুযায়ী দেখা এবং যোগ করা যায়।
 
-Currently, two official plugins are available:
+ডাইনামিক স্ট্যাটিস্টিকস: Recharts ব্যবহার করে আপনার কার্যক্রমের একটি পাই-চার্ট (Pie Chart) ওভারভিউ দেখা যায়।
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+স্মার্ট ফিল্টারিং: ক্যাটাগরি অনুযায়ী টাইমলাইন ডেটা ফিল্টার করার সুবিধা।
 
-## React Compiler
+রেসপনসিভ ডিজাইন: ডেস্কটপ থেকে মোবাইল—সব ডিভাইসেই এটি চমৎকারভাবে কাজ করে।
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+ডার্ক মোড ইউআই: ব্যবহারকারীর চোখের আরামের জন্য প্রিমিয়াম ডার্ক থিম ইন্টারফেস।
 
-## Expanding the ESLint configuration
+🛠 প্রযুক্তি (Tech Stack)
+Frontend: React.js (Vite)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Styling: Tailwind CSS
+
+Icons: Lucide React
+
+Charts: Recharts
+
+Context API: State ম্যানেজমেন্টের জন্য ব্যবহার করা হয়েছে।
+
+📸 স্ক্রিনশট (Screenshots)
+[আপনার প্রজেক্টের একটি সুন্দর স্ক্রিনশট এখানে যুক্ত করুন]
+
+🚀 যেভাবে শুরু করবেন (Getting Started)
+আপনার পিসিতে প্রজেক্টটি চালানোর জন্য নিচের ধাপগুলো অনুসরণ করুন:
+
+১. রিপোজিটরি ক্লোন করুন:
+
+Bash
+git clone https://github.com/Rahim-Ahmed-10/keenkeeper.git
+২. প্রজেক্ট ফোল্ডারে যান:
+
+Bash
+cd keenkeeper
+
+৩. প্রয়োজনীয় প্যাকেজ ইনস্টল করুন:
+
+Bash
+npm install
+৪. প্রজেক্ট রান করুন:
+
+Bash
+npm run dev
+
+৫.লাইভ লিংক:
+
+
+🤝 অবদান (Contribution)
+আপনি যদি এই প্রজেক্টে কোনো অবদান রাখতে চান বা নতুন ফিচার যোগ করতে চান, তবে নির্দ্বিধায় একটি Pull Request পাঠান।
+
+📄 লাইসেন্স
+এই প্রজেক্টটি MIT লাইসেন্সের অধীনে প্রকাশিত।
+
+Developed with ❤️ by [Rahim]
