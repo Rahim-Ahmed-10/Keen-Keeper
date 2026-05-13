@@ -27,7 +27,9 @@ const Timeline = () => {
   <option value="video">Video</option>
 </select>
             </div>
-        {
+        {filteredTimeline.length === 0 ? <div className='bg-gray-200 text-red-500 text-3xl font-bold w-full h-60 flex justify-center text-center items-center'>
+          <h2>No Data Found!</h2>
+        </div> :
             filteredTimeline.map((item) => {
                 return <div key={item.id} className="flex items-center border-b p-2 ">
     {item.type === 'call' && <Phone className="text-gray-600" />}
