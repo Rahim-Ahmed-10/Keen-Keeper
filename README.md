@@ -48,7 +48,7 @@ Bash
 npm run dev
 
 ৫.লাইভ লিংক:
-
+"keen-keeper-hp.netlify.app"
 
 🤝 অবদান (Contribution)
 আপনি যদি এই প্রজেক্টে কোনো অবদান রাখতে চান বা নতুন ফিচার যোগ করতে চান, তবে নির্দ্বিধায় একটি Pull Request পাঠান।
